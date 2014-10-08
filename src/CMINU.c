@@ -62,7 +62,7 @@ void CMINU_RUN_TESTS() {
         t = t->next;
     }
     
-    printf("Test compleate:\n");
+    printf("Test complete:\n");
     printf("    Success:   %i/%i\n", success_tests, success_tests+failed_tests);
     printf("    Failures:  %i/%i\n", failed_tests, success_tests+failed_tests);
 
