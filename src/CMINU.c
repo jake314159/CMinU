@@ -5,9 +5,9 @@
 #define TRUE 1
 #define FALSE 0
 
-int success_tests;
-int failed_tests;
-char show_success = TRUE;
+static int success_tests;
+static int failed_tests;
+static char show_success = TRUE;
 
 typedef struct TEST_ENTRY {
     char *name;
@@ -15,16 +15,16 @@ typedef struct TEST_ENTRY {
     struct TEST_ENTRY *next;
 } TEST_ENTRY;
 
-TEST_ENTRY *test_list = 0;
+static TEST_ENTRY *test_list = 0;
 
-void success(char *name, char *explain) {
+static void success(char *name, char *explain) {
     success_tests++;
     if(show_success) {
         printf("    [PASS]   %s %s\n", name, explain);
     }
 }
 
-void fail(char *name, char *explain) {
+static void fail(char *name, char *explain) {
     failed_tests++;
     printf("    [FAIL]   %s %s\n", name, explain);
 }
