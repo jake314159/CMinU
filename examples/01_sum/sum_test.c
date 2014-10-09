@@ -1,12 +1,3 @@
-#CMINU
-
-A simple C unit test framework
-
-#Quick start guide
-
-Here is a quick example of a unit test
-
-```C
 #include "CMINU.h"
 // Notice we are including the actual C code not the header
 // We could then replace any external calls with dummy functions
@@ -44,27 +35,3 @@ int main()
     // This will cause the program to exit with 0 for success or 1 for fail
     CMINU_RUN_TESTS();
 }
-
-
-```
-
-You can then compile and run the unit test with gcc like so:
-
-```bash
-gcc sum_test.c CMINU.c -o unit_test
-./unit_test
-```
-
-This will (hopefully) then give the output below
-
-```
-Testing "test_my_sum_ones":
-    [PASS]   my_sum with array of one's
-
-Testing "test_my_sum_incr":
-    [PASS]   my_sum with array of incrementing values
-
-Test complete:
-    Success:   2/2
-    Failures:  0/2
-```
